@@ -1,0 +1,7 @@
+.HeaderCartDetails {
+    display: none;
+}
+
+.HeaderShowDeatils:hover .HeaderCartDetails {
+    display: flex;
+}
