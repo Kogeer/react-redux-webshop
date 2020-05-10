@@ -1,3 +1,18 @@
 .Header {
-    display:flex;
+    display: flex;
+    height: 130px;
+    background-image: linear-gradient(to right, #39746f 10%, #479d97 100%);
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.9;
+    border-bottom: 5px solid white;
+}
+
+.HeaderLogo {
+    text-align: center;
+    font-size: 56px;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
 }

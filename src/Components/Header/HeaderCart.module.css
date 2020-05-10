@@ -1,7 +1,35 @@
-.HeaderCartDetails {
-    display: none;
+.Cart {
+    display:flex;
+    width: 10%;
+    height: 50%;
+    background-color: #428f8a;
+    border: 0.5px solid;
+    border-style: inset;
+    border-radius: 3px;    
+    color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 4px rgb(25, 104, 114);
+    text-decoration: none;
 }
 
-.HeaderShowDeatils:hover .HeaderCartDetails {
-    display: flex;
+.HeaderCartDetails {
+    display: block;
+    padding: 5px;
+    margin-top: 55px;
+    width: 15%;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    visibility: hidden;
+    position: absolute;
+    box-shadow: 4px 4px 4px rgb(23, 70, 77);
+}
+
+.Cart:hover .HeaderCartDetails {    
+    color: black;
+    background-color: white;
+    border-style: dashed;
+    border: 1px solid;
+    opacity: 1;
+    visibility: visible;
 }
