@@ -7,8 +7,8 @@ function Products(props) {
     return(
         <div className={styles.ProductsGridContainer}>
             {
-                props.prodItems.map(item=> {
-                    return <ProdBox item={item} />
+                props.prodItems.map((item,idx)=> {
+                    return <ProdBox item={item} key={idx}/>
                 })
             }
         </div>
