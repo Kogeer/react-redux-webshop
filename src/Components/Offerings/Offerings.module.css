@@ -1,4 +1,7 @@
 .OfferingsContainer {
-    height: 30px;
-    /* background-color: #90afc5; */
+    height: 150px;
+    border-bottom: 1px solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }

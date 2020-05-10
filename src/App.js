@@ -5,7 +5,7 @@ import Products from './Components/Products/Products';
 import Footer from './Components/Footer/Footer';
 
 import styles from './App.module.css';
-import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Checkout from './Components/Checkout/Checkout';
 
 export default class App extends React.Component {

@@ -4,12 +4,12 @@ import styles from './HeaderCart.module.css'
 import { Link } from 'react-router-dom';
 
 export default function HeaderCart(props) {
-    const totalPrice = props.items.reduce((init,curr) => init+curr.subtotal,0)
+    const totalPrice = props.items.reduce((init,curr) => init+curr.subtotal*curr.pcs,0)
     if(props.items.length) {
         return (
             <Link to="/checkout" className={styles.Cart}>
-                <p >Total: {totalPrice}</p>
-                <p className={styles.HeaderCartDetails}><HeaderCartDeatils items={props.items} /></p>
+                <div >Total: {totalPrice}</div>
+                <div className={styles.HeaderCartDetails}><HeaderCartDeatils items={props.items} /></div>
             </Link>
         )
     }

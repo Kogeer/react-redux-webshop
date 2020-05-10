@@ -2,28 +2,23 @@ import React from 'react';
 import Logo from './Logo';
 import HeaderCart from './HeaderCart';
 import styles from './Header.module.css';
+import { connect } from 'react-redux';
 
-const items = [
-    {
-        name: 'Triola',
-        pcs: 2,
-        subtotal:300
-    },
-    {
-        name: 'Kuklux Kex',
-        pcs: 1,
-        subtotal:100
-    }
-]
 
-// const items = [];
-
-export default function Header() {
+function Header(props) {
     return(
         <div className={styles.Header}>
             <Logo />
             <div className={styles.HeaderLogo}>Webshop name</div>
-            <HeaderCart items={items}/>
+            <HeaderCart items={props.cartItems}/>
         </div>
     )
 }
+
+function mapStateToProps(state) {
+    return {
+        cartItems: state.cartItems
+    }
+}
+
+export default connect(mapStateToProps)(Header);
