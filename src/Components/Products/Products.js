@@ -8,7 +8,13 @@ function Products(props) {
         <div className={styles.ProductsGridContainer}>
             {
                 props.prodItems.map((item,idx)=> {
-                    return <ProdBox item={item} key={idx}/>
+                    let cartItem = {};
+                    props.cartItems.forEach(cItem => {
+                        if(cItem.name === item.name) {
+                            cartItem = {...cItem}
+                        }
+                    }) 
+                    return <ProdBox item={item} key={idx} inCart={cartItem}/>
                 })
             }
         </div>
@@ -17,6 +23,7 @@ function Products(props) {
 
 function mapStateToProps(state) {
     return {
+        cartItems: state.cartItems,
         prodItems: state.prodItems
     }
 }
