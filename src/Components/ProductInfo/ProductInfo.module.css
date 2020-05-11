@@ -1,0 +1,4 @@
+.productInfoContainer {
+    grid-area: prodinfo;
+    /* display: flex; */
+}

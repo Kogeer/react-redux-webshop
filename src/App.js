@@ -3,6 +3,7 @@ import Header from './Components/Header/Header';
 import Offerings from './Components/Offerings/Offerings';
 import Products from './Components/Products/Products';
 import Footer from './Components/Footer/Footer';
+import ProductPage from './Components/ProductInfo/ProductPage'
 
 import styles from './App.module.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ export default class App extends React.Component {
         
         <Switch>
           <Route path="/checkout" component={Checkout} />
+          <Route path="/product/:sku" component={ProductPage} />
           <Route path="/">
             <Offerings />
             <Products />

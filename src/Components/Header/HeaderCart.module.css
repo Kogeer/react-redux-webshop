@@ -13,8 +13,10 @@
 
 .HeaderCartDetails {
     display: block;
+    height: 90px;
     padding: 5px;
-    margin-top: 55px;
+    margin-top: 70px;
+    overflow-y: scroll;
     width: 15%;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
@@ -31,3 +33,13 @@
     opacity: 1;
     visibility: visible;
 }
+
+/* scrollbar width */
+.HeaderCartDetails::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* scrollbar handle */
+  .HeaderCartDetails::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);
+  }

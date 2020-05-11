@@ -1,0 +1,11 @@
+.ProductPageContainer {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "imggallery prodinfo"
+    "fullspec fullspec"
+    "recprods recprods";
+    justify-items: center;
+    justify-content: center;
+}

@@ -17,7 +17,9 @@ const initialState = {
             name: 'Triola',
             sku: 'TRL',
             price: 300,
-            stock: 10
+            stock: 10,
+            description: 'Ez egy igen impozáns trombita. Szépen szól és jól lehet vele a szomszédokat idegesíteni',
+            specs: 'Length=300mm,Height=300mm,Loudness=300dB'
         },
         {
             img: '/imgs/product_test.jpeg',
@@ -45,7 +47,13 @@ const initialState = {
             name: 'Mechiko tequila',
             sku: 'MT',
             price: 30,
-            stock: 0
+            stock: 1
+        },{
+            img: '/imgs/product_test.jpeg',
+            name: 'Mechiko beer',
+            sku: 'MB',
+            price: 15,
+            stock: 900
         }
     ]
 
