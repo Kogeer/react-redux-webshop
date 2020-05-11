@@ -1,13 +1,15 @@
 .button {
+    display: flex;
+    align-items: center;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
-    background: #60a3bc;
+    background: rgb(77, 152, 212);
     padding: 3px;
     border-radius: 2px;
-    display: inline-block;
     border: none;
     transition: all 0.4s ease 0s;
+    height: 35px;
     }
 
 .button:hover {

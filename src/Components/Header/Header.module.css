@@ -1,7 +1,7 @@
 .Header {
     display: flex;
     height: 130px;
-    background-image: linear-gradient(to right, #39746f 10%, #479d97 100%);
+    background-image: linear-gradient(to right, #0063B2FF 10%, #9CC3D5FF 100%);
     color: white;
     justify-content: space-around;
     align-items: center;

@@ -15,9 +15,9 @@ export default function ProdBox(props) {
                 <div className={styles.Details}>{props.item.price}</div>
             </div>
             <div className={styles.ActionButtonsContainer}>
-                <div >Remove button</div>
+                <div >{props.inCart.pcs ? <PrudoctButton item={props.item} inCart={props.inCart.pcs}/> : ''}</div>
                 <div >{props.inCart.pcs ? props.inCart.pcs : 0}</div>
-                <div >{props.item.stock ? <PrudoctButton /> : <div>Out of stock</div>}</div>
+                <div >{props.item.stock ? <PrudoctButton item={props.item}/> : <div>Out of stock</div>}</div>
             </div>
         </div>
     )
