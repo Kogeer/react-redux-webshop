@@ -6,6 +6,13 @@
     "imggallery prodinfo"
     "fullspec fullspec"
     "recprods recprods";
-    justify-items: center;
     justify-content: center;
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(23, 70, 77);
 }

@@ -10,9 +10,9 @@ function ProductPage(props) {
     if(props.product) {
         return (
             <div className={styles.ProductPageContainer}>
-                <ProductInfo />
-                <ImageGallery />
-                <FullSpecs />
+                <ProductInfo item={props.product}/>
+                <ImageGallery imgs={props.product.img}/>
+                <FullSpecs spec={props.product.specs}/>
                 <RecommendedProds />
             </div>
         )

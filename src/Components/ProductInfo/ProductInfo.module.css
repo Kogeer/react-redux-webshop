@@ -1,4 +1,14 @@
 .productInfoContainer {
     grid-area: prodinfo;
-    /* display: flex; */
+    height: 250px;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.addToCartButton {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

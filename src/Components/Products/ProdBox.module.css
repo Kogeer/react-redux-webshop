@@ -1,14 +1,16 @@
 .ProdBox {
     background-color: white;
     height: 180px;
-    padding: 10px;
+    padding: 20px;
     border-style: none;
     border-radius: 5px;
     box-shadow: 4px 4px 4px rgb(23, 70, 77);
 }
 
 .ImgContainer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .ProdBox img {
