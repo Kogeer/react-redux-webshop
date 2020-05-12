@@ -1,8 +1,10 @@
 import initialState from "../store/Store";
 import { ADD,REMOVE } from "../action/Actions";
+import {loadState,saveState} from '../store/localeStorage';
 
+const persistState = loadState();
 
-export default function Reducer(state = initialState, action) {
+export default function Reducer(state = persistState ? persistState : initialState, action) {
     switch(action.type) {
         case ADD: return {
             ...state,
