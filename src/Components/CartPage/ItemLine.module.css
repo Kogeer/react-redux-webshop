@@ -1,0 +1,15 @@
+.itemLineContainer {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    width: 800px;
+    height: 80px;
+    background-color: white;
+}
+
+.itemName {
+    justify-self: baseline;
+}

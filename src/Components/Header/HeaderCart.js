@@ -7,7 +7,7 @@ export default function HeaderCart(props) {
     const totalPrice = props.items.reduce((init,curr) => init+curr.subtotal*curr.pcs,0)
     if(props.items.length) {
         return (
-            <Link to="/checkout" className={styles.Cart}>
+            <Link to="/cartpage" className={styles.Cart}>
                 <div >Total: {totalPrice}</div>
                 <div className={styles.HeaderCartDetails}><HeaderCartDeatils items={props.items} /></div>
             </Link>

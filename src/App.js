@@ -8,6 +8,7 @@ import ProductPage from './Components/ProductInfo/ProductPage'
 import styles from './App.module.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Checkout from './Components/Checkout/Checkout';
+import CartPage from './Components/CartPage/CartPage';
 
 export default class App extends React.Component {
 
@@ -20,6 +21,7 @@ export default class App extends React.Component {
         <Switch>
           <Route path="/checkout" component={Checkout} />
           <Route path="/product/:sku" component={ProductPage} />
+          <Route path="/cartpage" component={CartPage} />
           <Route path="/">
             <Offerings />
             <Products />

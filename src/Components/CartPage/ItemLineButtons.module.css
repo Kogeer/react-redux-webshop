@@ -1,0 +1,20 @@
+.button {
+    background-color: rgb(77, 152, 212);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    margin: 4px 6px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .buttonsContainer {
+    display: grid;
+    grid-template-columns: repeat(3,40px);
+    width: 120px;
+    justify-items: center;
+    align-items: center;
+  }
