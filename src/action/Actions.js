@@ -1,5 +1,6 @@
 const ADD = 'ADD';
 const REMOVE = 'REMOVE';
+const DELETE_ALL = 'DELETE_ALL'
 
 function addToCart(item) {
     return {
@@ -15,4 +16,11 @@ function removeFromCart(item) {
     }
 }
 
-export {ADD,REMOVE,addToCart,removeFromCart};
+function emptyCart(items) {
+    return {
+        type: DELETE_ALL,
+        items
+    }
+}
+
+export {ADD,REMOVE,addToCart,removeFromCart,DELETE_ALL,emptyCart};

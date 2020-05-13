@@ -3,7 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    
+    padding: 15px;
+    font-size: 18px;
 }
 
 .itemsContainer {
@@ -12,4 +13,5 @@
     box-shadow: 4px 4px 4px rgb(23, 70, 77);
     width: 800px;
     margin: auto;
+    background-color: white;
 }

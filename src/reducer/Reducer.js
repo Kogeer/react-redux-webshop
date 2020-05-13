@@ -1,5 +1,5 @@
 import initialState from "../store/Store";
-import { ADD,REMOVE } from "../action/Actions";
+import { ADD,REMOVE, DELETE_ALL } from "../action/Actions";
 import {loadState,saveState} from '../store/localeStorage';
 
 const persistState = loadState();
@@ -46,6 +46,21 @@ export default function Reducer(state = persistState ? persistState : initialSta
                     return {
                         ...item,
                         stock: item.stock+1
+                    }
+                }
+                return item
+            })
+        }
+
+        case DELETE_ALL: return {
+            ...state,
+            cartItems: [],
+            prodItems: state.prodItems.map(item => {
+                const addStock = action.items.find(it => it.name === item.name)
+                if(addStock) {
+                    return {
+                        ...item,
+                        stock: item.stock + addStock.pcs
                     }
                 }
                 return item

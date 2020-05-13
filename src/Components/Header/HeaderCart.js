@@ -16,7 +16,7 @@ export default function HeaderCart(props) {
 
     return(
         <div className={styles.Cart}>
-            Car is empty
+            Cart is empty
         </div>
     )
 }
