@@ -7,8 +7,8 @@ import styles from './BottomCart.module.css'
 function BottomCartButtons(props) {
     return (
         <div className={styles.buttonsContainer}>
-            <button onClick={() => props.emptyCart(props.items)}>Empty cart</button>
-            <Link to='/checkout' >Checkout</Link>
+            <button onClick={() => props.emptyCart(props.items)} className={styles.button}>Empty cart</button>
+            <Link to='/checkout' className={styles.linkButton}>Checkout</Link>
         </div>
     )
 }

@@ -8,7 +8,8 @@
 .totalPrice {
     align-self: flex-end;
     margin-right: 7%;
-    font-size: 24px;    
+    font-size: 24px;
+    margin-top: 10px; 
 }
 
 .buttonsContainer {
@@ -16,4 +17,28 @@
     justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.button {
+    background-color: rgb(233, 102, 102);
+    border: none;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90px;
+}
+
+.linkButton {
+    background-color: rgb(77, 152, 212);
+    border: none;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+    text-decoration: none;
+    text-align: center;
 }

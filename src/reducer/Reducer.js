@@ -1,6 +1,6 @@
 import initialState from "../store/Store";
 import { ADD,REMOVE, DELETE_ALL } from "../action/Actions";
-import {loadState,saveState} from '../store/localeStorage';
+import {loadState} from '../store/localeStorage';
 
 const persistState = loadState();
 
