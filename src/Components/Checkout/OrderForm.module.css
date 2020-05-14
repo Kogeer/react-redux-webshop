@@ -1,0 +1,40 @@
+.formContainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,20px);
+    row-gap: 10px;
+    width: 100%;
+}
+
+.inputDetails {
+    margin-left: 120px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-items: flex-end;
+    justify-content: flex-end;
+}
+
+.orderButton {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    background: rgb(77, 152, 212);
+    padding: 3px;
+    border-radius: 2px;
+    border: none;
+    transition: all 0.4s ease 0s;
+    height: 25px;
+    width: 100px;
+    }
+
+.orderButton:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}

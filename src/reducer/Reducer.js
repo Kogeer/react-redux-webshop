@@ -1,5 +1,5 @@
 import initialState from "../store/Store";
-import { ADD,REMOVE, DELETE_ALL } from "../action/Actions";
+import { ADD,REMOVE, DELETE_ALL, SENDORDER } from "../action/Actions";
 import {loadState} from '../store/localeStorage';
 
 const persistState = loadState();
@@ -65,6 +65,11 @@ export default function Reducer(state = persistState ? persistState : initialSta
                 }
                 return item
             })
+        }
+
+        case SENDORDER: return {
+            ...state,
+            cartItems: []
         }
 
         default : return state;
