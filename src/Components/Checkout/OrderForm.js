@@ -3,13 +3,13 @@ import styles from './OrderForm.module.css';
 import ErrorInputs from './ErrorInputs';
 import OrderFormValidation from '../../utils/OrderFormValidation'
 import { connect } from 'react-redux';
-import {sendOrder} from '../../action/Actions'
+import { sendOrder } from '../../action/Actions'
 
-class OrderForm extends React.Component{
+class OrderForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            errors : null
+            errors: null
         }
 
         this.name = React.createRef();
@@ -21,28 +21,28 @@ class OrderForm extends React.Component{
         const name = this.name.current.value;
         const email = this.email.current.value;
         const address = this.address.current.value;
-        
+
         const orderFormValidation = new OrderFormValidation();
-        const frontendNotValid = orderFormValidation.formValidation(name,email,address);
-        if(Object.keys(frontendNotValid).length > 0) {
-            this.setState({errors:frontendNotValid})
+        const frontendNotValid = orderFormValidation.formValidation(name, email, address);
+        if (Object.keys(frontendNotValid).length > 0) {
+            this.setState({ errors: frontendNotValid })
             return;
         }
 
-        const data = {name: name,email: email, address: address, items: this.props.items}
+        const data = { name: name, email: email, address: address, items: this.props.items }
 
         const requestOptions = {
             method: 'POST',
             body: JSON.stringify(data),
-            headers : {
+            headers: {
                 'Content-Type': 'application/json'
             }
         }
 
-        const response = await fetch('http://localhost:3050/sendorder',requestOptions);
+        const response = await fetch('http://localhost:3050/sendorder', requestOptions);
 
         this.props.sendOrder(this.props.items)
-    } 
+    }
 
     render() {
         return (
@@ -55,7 +55,7 @@ class OrderForm extends React.Component{
                 <div className={styles.buttonContainer}>
                     <button className={styles.orderButton} onClick={() => this.validating()}>Order</button>
                 </div>
-                {this.state.errors&&<ErrorInputs error={this.state.errors} />}
+                {this.state.errors && <ErrorInputs error={this.state.errors} />}
             </div>
         )
     }

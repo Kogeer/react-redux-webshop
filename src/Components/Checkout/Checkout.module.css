@@ -18,3 +18,15 @@
     justify-items: center;
     padding: 20px;
 }
+
+.noItemsContainer {
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(23, 70, 77);
+    background-color: white;
+    width: 780px;
+    padding: 20px;
+    text-align: center;
+    color: red;
+    font-size: 36px;
+}
