@@ -1,0 +1,26 @@
+.dotsContainer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.actualDot {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(192, 79, 79);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}

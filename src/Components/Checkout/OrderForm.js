@@ -1,15 +1,17 @@
 import React from 'react';
 import styles from './OrderForm.module.css';
 import ErrorInputs from './ErrorInputs';
-import OrderFormValidation from '../../utils/OrderFormValidation'
+import OrderFormValidation from '../../utils/OrderFormValidation';
 import { connect } from 'react-redux';
-import { sendOrder } from '../../action/Actions'
+import { sendOrder } from '../../action/Actions';
+import { Redirect } from 'react-router-dom';
 
 class OrderForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            errors: null
+            errors: null,
+            sent: false
         }
 
         this.name = React.createRef();
@@ -17,13 +19,14 @@ class OrderForm extends React.Component {
         this.address = React.createRef();
     }
 
-    async validating() {
+    async validatingAndSend() {
         const name = this.name.current.value;
         const email = this.email.current.value;
         const address = this.address.current.value;
+        const items = this.props.items;
 
         const orderFormValidation = new OrderFormValidation();
-        const frontendNotValid = orderFormValidation.formValidation(name, email, address);
+        const frontendNotValid = orderFormValidation.formValidation(name, email, address, items);
         if (Object.keys(frontendNotValid).length > 0) {
             this.setState({ errors: frontendNotValid })
             return;
@@ -42,6 +45,16 @@ class OrderForm extends React.Component {
         const response = await fetch('http://localhost:3050/sendorder', requestOptions);
 
         this.props.sendOrder(this.props.items)
+
+        if (response.ok) {
+            this.setState(state => {
+                return {
+                    ...state,
+                    sent: true
+                }
+            })
+        }
+
     }
 
     render() {
@@ -53,9 +66,10 @@ class OrderForm extends React.Component {
                     <span className={styles.inputDetails}>Address:</span><input type="text" ref={this.address}></input>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <button className={styles.orderButton} onClick={() => this.validating()}>Order</button>
+                    <button className={styles.orderButton} onClick={() => this.validatingAndSend()}>Order</button>
                 </div>
                 {this.state.errors && <ErrorInputs error={this.state.errors} />}
+                {this.state.sent && <Redirect to="/" />}
             </div>
         )
     }

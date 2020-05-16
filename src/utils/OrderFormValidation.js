@@ -3,7 +3,7 @@ export default class OrderFormValidation {
         this.error = [];
     }
 
-    formValidation(name,email,address) {
+    formValidation(name,email,address,items) {
         if(!name) {
             this.error.push('Name is required');
         }
@@ -13,6 +13,10 @@ export default class OrderFormValidation {
 
         if(!address) {
             this.error.push('Address is required');
+        }
+
+        if(!items.length) {
+            this.error.push('No items in your cart')
         }
 
         return this.error;

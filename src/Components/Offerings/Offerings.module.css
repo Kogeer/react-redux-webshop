@@ -1,7 +1,8 @@
 .OfferingsContainer {
-    height: 150px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
     border-bottom: 1px solid;
     justify-content: center;
     align-items: center;
-    display: flex;
 }

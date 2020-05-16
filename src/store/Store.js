@@ -65,6 +65,26 @@ const initialState = {
             description: 'Egyenesen Mehikóból. Extra nagy 5L-es kiszerelésben. A legjobb sör!',
             specs: 'Length=300mm,Height=500mm'
         }
+    ],
+    offerings : [
+        {
+            img: '/imgs/iphone.jpeg',
+            index: 0,
+            sku: 'TRL',
+            marketing: 'Ez nem az aminek látszik'
+        },
+        {
+            img: '/imgs/lenovo.jpg',
+            index: 1,
+            sku: 'KKK',
+            marketing: 'No persze ez sem'
+        },
+        {
+            img: '/imgs/moha.jpg',
+            index: 2,
+            sku: 'BG',
+            marketing: 'Naná hogy ez se'
+        }
     ]
 
 }
