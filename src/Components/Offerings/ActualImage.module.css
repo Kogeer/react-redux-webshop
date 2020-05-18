@@ -7,6 +7,8 @@
     border-style: none;
     border-radius: 5px;
     box-shadow: 4px 4px 4px rgb(23, 70, 77);
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    transition: 3s;
 }
 
 .imgcont img {
@@ -34,4 +36,13 @@
     text-decoration: none;
     font-size: 20px;
     margin-bottom: 0;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }

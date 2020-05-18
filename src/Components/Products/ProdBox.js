@@ -9,7 +9,7 @@ export default function ProdBox(props) {
         <div className={styles.ProdBox}>
             <div className={styles.ImgContainer}>
                 <Link to={`/product/${props.item.sku}`}>
-                    <Img src={props.item.img} />
+                    <Img src={`http://localhost:3050${props.item.imagePath}`} />
                 </Link>
             </div>
             <div className={styles.DeatilsContainer}>

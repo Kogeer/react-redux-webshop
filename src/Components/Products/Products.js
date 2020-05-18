@@ -4,6 +4,9 @@ import ProdBox from './ProdBox';
 import styles from './Products.module.css'
 
 function Products(props) {
+    if(!props.prodItems) {
+        return <div>Loading</div>
+    }
     return(
         <div className={styles.ProductsGridContainer}>
             {

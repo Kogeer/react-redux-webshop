@@ -6,11 +6,16 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Reducer from './reducer/Reducer';
 import { saveState } from './store/localeStorage';
+import { loadData } from './store/Store';
+import { saveSessionState } from './store/sessionStorage';
 
 const store = createStore(Reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
+loadData();
+
 store.subscribe(() => {
   saveState(store.getState());
+  saveSessionState(store.getState());
 })
 
 ReactDOM.render(
@@ -24,3 +29,5 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+export {store};

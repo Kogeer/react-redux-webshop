@@ -1,6 +1,12 @@
 import React from 'react';
 import styles from './ImageGallery.module.css';
 
-export default function ImageGallery(props) {
-    return <div className={styles.imgGalleryContainer}>ImageGallery</div>
+export default class ImageGallery extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return <div className={styles.imgGalleryContainer}>ImageGallery</div>
+    }
 }

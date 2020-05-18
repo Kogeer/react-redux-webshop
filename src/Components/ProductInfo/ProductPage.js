@@ -6,18 +6,25 @@ import FullSpecs from './FullSpecs';
 import styles from './ProductPage.module.css'
 import RecommendedProds from './RecommendedProds';
 
-function ProductPage(props) {
-    if(props.product) {
-        return (
-            <div className={styles.ProductPageContainer}>
-                <ProductInfo item={props.product}/>
-                <ImageGallery imgs={props.product.img}/>
-                <FullSpecs spec={props.product.specs}/>
-                <RecommendedProds />
-            </div>
-        )
+class ProductPage extends React.Component {
+    
+    componentDidMount() {
+
     }
-    return <div>No product with this SKU!</div>
+
+    render() {
+        if(this.props.product) {
+            return (
+                <div className={styles.ProductPageContainer}>
+                    <ProductInfo item={this.props.product}/>
+                    <ImageGallery imgs={this.props.product.img}/>
+                    <FullSpecs spec={this.props.product.specs}/>
+                    <RecommendedProds />
+                </div>
+            )
+        }
+        return <div>No product with this SKU!</div>
+    }
 }
 
 function mapStateToProps(state,props) {

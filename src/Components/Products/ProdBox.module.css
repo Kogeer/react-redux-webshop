@@ -15,7 +15,8 @@
 
 .ProdBox img {
     box-shadow: 0 4px 8px 0 rgba(102, 164, 173, 0.2), 0 6px 20px 0 rgba(102, 164, 173, 0.19);
-    width: 100px;
+    width: auto;
+    height: 100px;
     border-radius: 5px;
 }
 

@@ -2,6 +2,7 @@ const ADD = 'ADD';
 const REMOVE = 'REMOVE';
 const DELETE_ALL = 'DELETE_ALL';
 const SENDORDER = 'SENDORDER';
+const DATA_LOAD = 'DATA_LOAD';
 
 function addToCart(item) {
     return {
@@ -31,4 +32,11 @@ function sendOrder(items) {
     }
 }
 
-export {ADD,REMOVE,addToCart,removeFromCart,DELETE_ALL,emptyCart,SENDORDER,sendOrder};
+function dataLoad(items) {
+    return {
+        type: DATA_LOAD,
+        items
+    }
+}
+
+export {ADD,REMOVE,addToCart,removeFromCart,DELETE_ALL,emptyCart,SENDORDER,sendOrder,DATA_LOAD,dataLoad};

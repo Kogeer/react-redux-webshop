@@ -3,7 +3,6 @@ import styles from './ActualImage.module.css';
 import {Link} from 'react-router-dom';
 
 export default function ActualImage(props) {
-    console.log(props.src)
     return (
         <div className={styles.imgcont} >
             <img src={props.src.img}  />
