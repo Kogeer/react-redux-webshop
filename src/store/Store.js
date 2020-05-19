@@ -2,6 +2,7 @@ import {dataLoad} from '../action/Actions';
 import {store} from '../index';
 
 let initialState = {
+    prodItems: [],
     cartItems: [],    
     offerings : [
         {

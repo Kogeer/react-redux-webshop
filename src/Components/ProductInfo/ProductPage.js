@@ -28,6 +28,7 @@ class ProductPage extends React.Component {
 }
 
 function mapStateToProps(state,props) {
+    console.log(state);
     return {
         product : state.prodItems.find(item => (item.sku).toUpperCase() === (props.match.params.sku).toUpperCase())
     }

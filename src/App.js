@@ -9,8 +9,13 @@ import styles from './App.module.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Checkout from './Components/Checkout/Checkout';
 import CartPage from './Components/CartPage/CartPage';
+import { loadData } from './store/Store';
 
 export default class App extends React.Component {
+
+  async componentDidMount() {
+    await loadData();
+  }
 
   render() {
     return (

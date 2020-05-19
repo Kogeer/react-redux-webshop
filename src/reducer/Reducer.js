@@ -1,16 +1,12 @@
-import {initialState, loadData} from "../store/Store";
+import {initialState} from "../store/Store";
 import { ADD,REMOVE, DELETE_ALL, SENDORDER, DATA_LOAD } from "../action/Actions";
 import {loadState} from '../store/localeStorage';
-import { loadSessionState } from "../store/sessionStorage";
 
 
 const persistState = loadState();
-const prods = loadSessionState();
 if(persistState) {
     initialState.cartItems = persistState;
-    initialState.prodItems = prods;
 }
-// const persistState = false;
 
 export default function Reducer(state = initialState, action) {
     switch(action.type) {
@@ -83,7 +79,7 @@ export default function Reducer(state = initialState, action) {
         case DATA_LOAD:
         return {
             ...state,
-            prodItems: action.items
+            prodItems: action.items || []
         }
 
         default : return state;
