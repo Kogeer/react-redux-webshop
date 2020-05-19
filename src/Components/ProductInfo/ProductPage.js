@@ -17,7 +17,7 @@ class ProductPage extends React.Component {
             return (
                 <div className={styles.ProductPageContainer}>
                     <ProductInfo item={this.props.product}/>
-                    <ImageGallery imgs={this.props.product.img}/>
+                    <ImageGallery item={this.props.product}/>
                     <FullSpecs spec={this.props.product.specs}/>
                     <RecommendedProds />
                 </div>
@@ -28,7 +28,6 @@ class ProductPage extends React.Component {
 }
 
 function mapStateToProps(state,props) {
-    console.log(state);
     return {
         product : state.prodItems.find(item => (item.sku).toUpperCase() === (props.match.params.sku).toUpperCase())
     }

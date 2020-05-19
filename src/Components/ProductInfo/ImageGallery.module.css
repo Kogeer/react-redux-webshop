@@ -1,3 +1,13 @@
 .imgGalleryContainer {
+    display: flex;
+    flex-direction: column;
     grid-area: imggallery;
+    align-items: center;
+}
+
+.miniContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
 }
