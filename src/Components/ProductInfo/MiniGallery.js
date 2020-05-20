@@ -44,12 +44,14 @@ export default class MiniGallery extends React.Component {
         return(
             <div className={styles.miniContainer}>
                 {this.props.imgs.length > 3 && <LeftButton shiftDown={() => this.shiftDown()}/>}
+                <div className={styles.imgCont}>
                 {
                     this.props.imgs.map((img,idx) => {
                         if(idx <= this.state.maxIndex && idx >= this.state.minIndex)
-                        return <img src={`http://localhost:3050${img.imagePath}`} alt="" key={idx}/>
+                        return <img src={`http://localhost:3050${img.imagePath}`} alt="" key={idx} className={styles.imgs} onClick={() => this.props.setMainImage(img.imagePath)}/>
                     })
                 }
+                </div>
                 {this.props.imgs.length > 3 && <RightButton shiftUp={() => this.shiftUp()}/>}
             </div>
         )

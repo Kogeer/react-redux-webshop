@@ -21,13 +21,15 @@ export default class ImageGallery extends React.Component {
         this.setState({images:resp.imagesPath,main:mainImage})
     }
 
+    setMainImage(imgSrc) {
+        this.setState({main:{imagePath:imgSrc}})
+    }
+
     render() {
         return (
             <div className={styles.imgGalleryContainer}>
                 <MainImage img={this.state.main} />
-                <div className={styles.miniContainer}>
-                <MiniGallery imgs={this.state.images} />
-                </div>
+                <MiniGallery imgs={this.state.images} setMainImage={(imgSrc) => this.setMainImage(imgSrc)}/>
             </div>
         )
     }

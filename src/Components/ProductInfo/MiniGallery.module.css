@@ -1,18 +1,27 @@
 .miniContainer {
     display: flex;
     justify-content: center;
-    width: 120px;
-    height: auto;
 }
 
-.miniContainer img {
+.imgCont {
+    display: flex;
+    width: 300px;
+    max-width: max-content;
+}
+
+.imgs {
+    display: flex;
     margin-left: 5px;
     margin-right: 5px;
-    width: auto;
     height: 60px;
+    width: auto;
+    max-width: max-content;
 }
 
-.miniContainer .rightButton,
+.miniContainer .rightButton {
+    width: 30px;
+}
+
 .miniContainer .leftButton {
     width: 30px;
 }
